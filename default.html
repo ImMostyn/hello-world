@@ -1,37 +1,223 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title>Initial setup test page</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+
+    <style>
+        .green {
+            color: green;
+        }
+
+        .animation-type {
+            list-style-type: none;
+            cursor: pointer;
+        }
+    </style>
+
 </head>
 <body>
-    <h1>Initial setup test page</h1>
 
-    <p>Default page on GearHost for Mostyn</p>
+    <div class="container">
+        <div class="header clearfix">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li id="about-link" role="presentation"><a href="#About" title="click to show implementation information">About</a></li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Test page</h3>
+        </div>
 
-    <p id="dynamic-client"></p>
+        <div class="jumbotron">
+            <h1>animation.css tests</h1>
+
+            <p>using stack of pending animations. </p>
+            <p>wtitten by Mostyn</p>
+
+        </div>
+
+        <div id="sprite" class="ui-helper-clearfix center-text">
+            <button class="btn btn-info">Choose Animation</button>
+        </div>
+
+        <div class="widget">
+            <h2>Animations</h2>
+            <ul class="ui-widget ui-helper-clearfix" style="columns: 6;">
+                <li class="animation-type ui-state-default ui-corner-all">bounce</li>
+                <li class="animation-type ui-state-default ui-corner-all">flash</li>
+                <li class="animation-type ui-state-default ui-corner-all">pulse</li>
+                <li class="animation-type ui-state-default ui-corner-all">rubberBand</li>
+                <li class="animation-type ui-state-default ui-corner-all">shake</li>
+                <li class="animation-type ui-state-default ui-corner-all">headShake</li>
+                <li class="animation-type ui-state-default ui-corner-all">swing</li>
+                <li class="animation-type ui-state-default ui-corner-all">tada</li>
+                <li class="animation-type ui-state-default ui-corner-all">wobble</li>
+                <li class="animation-type ui-state-default ui-corner-all">jello</li>
+                <li class="animation-type ui-state-default ui-corner-all">bounceIn</li>
+                <li class="animation-type ui-state-default ui-corner-all">bounceInDown</li>
+                <li class="animation-type ui-state-default ui-corner-all">bounceInLeft</li>
+                <li class="animation-type ui-state-default ui-corner-all">bounceInRight</li>
+                <li class="animation-type ui-state-default ui-corner-all">bounceInUp</li>
+                <li class="animation-type ui-state-default ui-corner-all">bounceOut</li>
+                <li class="animation-type ui-state-default ui-corner-all">bounceOutDown</li>
+                <li class="animation-type ui-state-default ui-corner-all">bounceOutLeft</li>
+                <li class="animation-type ui-state-default ui-corner-all">bounceOutRight</li>
+                <li class="animation-type ui-state-default ui-corner-all">bounceOutUp</li>
+                <li class="animation-type ui-state-default ui-corner-all">fadeIn</li>
+                <li class="animation-type ui-state-default ui-corner-all">fadeInDown</li>
+                <li class="animation-type ui-state-default ui-corner-all">fadeInDownBig</li>
+                <li class="animation-type ui-state-default ui-corner-all">fadeInLeft</li>
+                <li class="animation-type ui-state-default ui-corner-all">fadeInLeftBig</li>
+                <li class="animation-type ui-state-default ui-corner-all">fadeInRight</li>
+                <li class="animation-type ui-state-default ui-corner-all">fadeInRightBig</li>
+                <li class="animation-type ui-state-default ui-corner-all">fadeInUp</li>
+                <li class="animation-type ui-state-default ui-corner-all">fadeInUpBig</li>
+                <li class="animation-type ui-state-default ui-corner-all">fadeOut</li>
+                <li class="animation-type ui-state-default ui-corner-all">fadeOutDown</li>
+                <li class="animation-type ui-state-default ui-corner-all">fadeOutDownBig</li>
+                <li class="animation-type ui-state-default ui-corner-all">fadeOutLeft</li>
+                <li class="animation-type ui-state-default ui-corner-all">fadeOutLeftBig</li>
+                <li class="animation-type ui-state-default ui-corner-all">fadeOutRight</li>
+                <li class="animation-type ui-state-default ui-corner-all">fadeOutRightBig</li>
+                <li class="animation-type ui-state-default ui-corner-all">fadeOutUp</li>
+                <li class="animation-type ui-state-default ui-corner-all">fadeOutUpBig</li>
+                <li class="animation-type ui-state-default ui-corner-all">flipInX</li>
+                <li class="animation-type ui-state-default ui-corner-all">flipInY</li>
+                <li class="animation-type ui-state-default ui-corner-all">flipOutX</li>
+                <li class="animation-type ui-state-default ui-corner-all">flipOutY</li>
+                <li class="animation-type ui-state-default ui-corner-all">lightSpeedIn</li>
+                <li class="animation-type ui-state-default ui-corner-all">lightSpeedOut</li>
+                <li class="animation-type ui-state-default ui-corner-all">rotateIn</li>
+                <li class="animation-type ui-state-default ui-corner-all">rotateInDownLeft</li>
+                <li class="animation-type ui-state-default ui-corner-all">rotateInDownRight</li>
+                <li class="animation-type ui-state-default ui-corner-all">rotateInUpLeft</li>
+                <li class="animation-type ui-state-default ui-corner-all">rotateInUpRight</li>
+                <li class="animation-type ui-state-default ui-corner-all">rotateOut</li>
+                <li class="animation-type ui-state-default ui-corner-all">rotateOutDownLeft</li>
+                <li class="animation-type ui-state-default ui-corner-all">rotateOutDownRight</li>
+                <li class="animation-type ui-state-default ui-corner-all">rotateOutUpLeft</li>
+                <li class="animation-type ui-state-default ui-corner-all">rotateOutUpRight</li>
+                <li class="animation-type ui-state-default ui-corner-all">hinge</li>
+                <li class="animation-type ui-state-default ui-corner-all">rollIn</li>
+                <li class="animation-type ui-state-default ui-corner-all">rollOut</li>
+                <li class="animation-type ui-state-default ui-corner-all">zoomIn</li>
+                <li class="animation-type ui-state-default ui-corner-all">zoomInDown</li>
+                <li class="animation-type ui-state-default ui-corner-all">zoomInLeft</li>
+                <li class="animation-type ui-state-default ui-corner-all">zoomInRight</li>
+                <li class="animation-type ui-state-default ui-corner-all">zoomInUp</li>
+                <li class="animation-type ui-state-default ui-corner-all">zoomOut</li>
+                <li class="animation-type ui-state-default ui-corner-all">zoomOutDown</li>
+                <li class="animation-type ui-state-default ui-corner-all">zoomOutLeft</li>
+                <li class="animation-type ui-state-default ui-corner-all">zoomOutRight</li>
+                <li class="animation-type ui-state-default ui-corner-all">zoomOutUp</li>
+                <li class="animation-type ui-state-default ui-corner-all">slideInDown</li>
+                <li class="animation-type ui-state-default ui-corner-all">slideInLeft</li>
+                <li class="animation-type ui-state-default ui-corner-all">slideInRight</li>
+                <li class="animation-type ui-state-default ui-corner-all">slideInUp</li>
+                <li class="animation-type ui-state-default ui-corner-all">slideOutDown</li>
+                <li class="animation-type ui-state-default ui-corner-all">slideOutLeft</li>
+                <li class="animation-type ui-state-default ui-corner-all">slideOutRight</li>
+                <li class="animation-type ui-state-default ui-corner-all">slideOutUp</li>
+
+            </ul>
+        </div>
+
+        <div id="stack">
+            <h3>Pending Animations</h3>
+            <ul id="pending-animations">
+                <li><em>no animation items</em></li>
+            </ul>
+        </div>
+
+    </div>
 
 </body>
 </html>
 <script language="JavaScript">
 
+    var currentAnimation;
+    var pendingAnimations = [];
+    var spriteSelector = "#sprite";
+
+    function addAnimation(animationName) {
+        var animationRunning = (pendingAnimations.length > 0);
+
+        if (pendingAnimations.length > 0 && pendingAnimations[pendingAnimations.length - 1] == animationName) return;
+
+        pendingAnimations.push(animationName);
+
+        updatePendingDisplay();
+
+        if (animationRunning) return;
+
+        $(spriteSelector + " button").text("Animation: " + animationName);
+
+        $(spriteSelector).addClass("animated " + animationName);
+
+        
+    }
+
+    function animationConcluded() {
+
+        updatePendingDisplay();
+
+        //Nothing to clear
+        if (pendingAnimations.length < 1) return;
+
+        var sprite = $(spriteSelector);
+
+        var finishedAnimation = pendingAnimations.shift();
+
+        sprite.removeClass("animated " + finishedAnimation);
+
+        updatePendingDisplay();
+
+
+        //If nothing pending exit
+        if (pendingAnimations.length < 1) {
+            $(spriteSelector + " button").text("Choose Animation");
+            return;
+        }
+
+        var nextAnimation = pendingAnimations[0];
+
+        $(spriteSelector + " button").text("Animation: " + nextAnimation);
+        sprite.addClass("animated " + nextAnimation);
+
+        updatePendingDisplay();
+
+    }
+
+    function updatePendingDisplay() {
+        var pendingAnimationsList = $("#pending-animations");
+
+        pendingAnimationsList.empty();
+
+        if (pendingAnimations.length < 1) {
+            pendingAnimationsList.append("<li><em>no animation items</em></li>");
+        } else {
+            $.each(pendingAnimations, function(index, value) {
+                pendingAnimationsList.append("<li>" + value + "</li");
+            });
+        }
+    }
+
     $(document).ready(function () {
-        var dc = $("#dynamic-client");
+        $(spriteSelector).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', animationConcluded);
 
-        dc.html("This is from JQuery");
+        $(".animation-type").on('click', function () {
+            addAnimation(this.innerText);
+        });
 
-        dc.addClass("animate shake");
     });
 
 </script>
